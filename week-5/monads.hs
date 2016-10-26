@@ -1,0 +1,10 @@
+-- Syntax rules for do
+--   do { x }  -- >  x
+--   
+--   do {x ; <xs> }  -- >  x >> do { <xs> }
+--   
+--   do { a <- x ; <xs> }  -- >  x >>= \a -> do { <xs> }
+--   
+--   do { let <declarations> ; xs }
+--     -- >
+--   let <declarations> in do { xs }
